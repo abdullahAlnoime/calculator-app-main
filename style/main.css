@@ -163,7 +163,7 @@ body {
   background-color: var(--theme-equal-keys-color);
   box-shadow: 0 4px 0 0 var(--theme-equal-keys-shadow-color);
 }
-@media (min-width: 375px) {
+@media (min-width: 575px) {
   .container {
     width: 40% ;
     margin: 50px auto ;
