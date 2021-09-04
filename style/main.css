@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "Spartan";
+  src: url("Spartan.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Spartan";
+  font-weight: 700;
+}
+:root {
+  --theme-body-color : hsl(222,26%,31%);
+  --theme-text-color : #ffffff ;
+  --theme-toggle-color : hsl(223,31%,20%) ;
+  --theme-button-color : hsl(6,63%,50%) ;
+  --theme-screen-color : hsl(224,36%,15%) ;
+  --theme-keypad-color : hsl(223,31%,20%) ;
+  --theme-keys-num-color : hsl(221, 14%, 31%) ;
+  --theme-keys-color : hsl(30,25%,89%) ;
+  --theme-keys-shadow-color : hsl(28,16%,65%) ;
+  --theme-equal-keys-con-color : #FFF ;
+  --theme-equal-keys-color : hsl(6,63%,50%) ;
+  --theme-equal-keys-shadow-color : hsl(6,70%,34%) ;
+  --theme-del-reset-keys-color : hsl(225, 21%, 49%) ;
+  --theme-del-reset-keys-shadow-color : hsl(224,28%,35%) ;
+}
+body {
+  background-color: var(--theme-body-color) ;
+  padding: 14px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head h1 {
+  width: 30%;
+  color: var(--theme-text-color) ;
+}
+
+.head .switch {
+  display: flex ;
+  justify-content: space-between ;
+  width: 25%;
+  border-radius: 30px;
+  background-color: var(--theme-toggle-color);
+  position: relative ;
+}
+.head .switch:before {
+  content: "THEME" ;
+  height: 30px ;
+  font-size: 12px ;
+  color: var(--theme-text-color) ;
+  position: absolute ;
+  left: -60px ;
+  top: 50% ;
+  transform: translateY(-15%) ;
+}
+.head .switch span {
+  display: block;
+  width: 20px;
+  background-color: var(--theme-button-color);
+  height: 20px;
+  margin: 4px;
+  border-radius: 50%;
+  position: relative ;
+}
+
+.head .switch span:after {
+  content: "1" ;
+  color: var(--theme-text-color) ;
+  font-size: 12px ;
+  transform: translateX(-50%) ;
+  position: absolute ;
+  top: -18px ;
+  left: 50% ;
+}
+
+.head .switch span:nth-of-type(2) {
+  margin: 3.5px auto ; 
+  background-color: hsl(25, 98%, 40%);
+  display: none;
+}
+.head .switch span:nth-of-type(2):after {
+  content: "2" ;
+  color: hsl(60, 10%, 19%) ;
+  font-size: 12px ;
+}
+
+.head .switch span:last-of-type {
+  margin-left: auto ;
+  background-color: hsl(176, 100%, 44%);
+  display: none;
+}
+.head .switch span:last-of-type:after {
+  content: "3";
+  font-size: 12px ;
+  color: hsl(52, 100%, 62%) ;
+}
+.display {
+  background-color: var(--theme-screen-color) ;
+  height: 84px ;
+  border-radius: 8px ;
+  padding: 10px 15px ;
+}
+.display span {
+  height: 50% ;
+  display: flex ;
+  padding-top: 4px ;
+  font-weight: bolder ;
+  direction: rtl ;
+  letter-spacing: 1px ;
+  color: var(--theme-text-color) ;
+  align-items: center ;
+  font-size: 22px ;
+}
+.keys {
+  display: flex ;
+  margin: 20px 0 ;
+  border-radius: 8px ;
+  padding: 20px ;
+  background-color: var(--theme-keypad-color) ;
+  flex-wrap: wrap ;
+  justify-content: space-between ;
+}
+.keys span {
+  width: 60px ;
+  height: 60px ;
+  cursor: pointer ;
+  padding-top: 8px ;
+  margin-bottom: 10px ;
+  border-radius: 5px ;
+  color: var(--theme-keys-num-color) ;
+  font-weight: bolder ;
+  font-size: 22px ;
+  background-color: var(--theme-keys-color) ;
+  box-shadow: 0 4px 0 0 var(--theme-keys-shadow-color) ;
+  display: flex ;
+  justify-content: center ;
+  align-items: center ;
+}
+.keys span:nth-of-type(4) {
+  font-size: 14px ;
+  background-color: var(--theme-del-reset-keys-color);
+  box-shadow: 0 4px 0 0 var(--theme-del-reset-keys-shadow-color);
+  color: white ;
+}
+.keys span:nth-of-type(17) {
+  width: calc(50% - 6px);
+  background-color: var(--theme-del-reset-keys-color);
+  color: white ;
+  box-shadow: 0 4px 0 0 var(--theme-del-reset-keys-shadow-color);
+  font-size: 14px ;
+  margin-bottom: 0px ;
+}
+.keys span:last-of-type {
+  width: calc(50% - 6px) ;
+  font-size: 14px ;
+  margin-bottom: 0px ;
+  color: var(--theme-equal-keys-con-color) ;
+  background-color: var(--theme-equal-keys-color);
+  box-shadow: 0 4px 0 0 var(--theme-equal-keys-shadow-color);
+}
+@media (min-width: 375px) {
+  .container {
+    width: 40% ;
+    margin: 50px auto ;
+  }
+  .keys span {
+    width: 80px ;
+  }
+  .keys span:nth-of-type(17) ,
+  .keys span:last-of-type {
+    width: calc(50% - 3.5px);
+  }
+}
+.attribution {
+  font-size: 10px;
+  text-align: center;
+  color: var(--theme-text-color) ;
+}
+
+.attribution a {
+  color: var(--theme-text-color) ;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="./style/main.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="head">
+      <h1>calc</h1>
+      <div class="switch">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="display">
+      <span data-previous-operand></span>
+      <span data-current-operand></span>
+    </div>
+    <div class="keys">
+      <span data-number>1</span>
+      <span data-number>2</span>
+      <span data-number>3</span>
+      <span data-delete>DEL</span>
+      <span data-number>4</span>
+      <span data-number>5</span>
+      <span data-number>6</span>
+      <span data-operation>+</span>
+      <span data-number>7</span>
+      <span data-number>8</span>
+      <span data-number>9</span>
+      <span data-operation>-</span>
+      <span data-number>.</span>
+      <span data-number>0</span>
+      <span data-operation>/</span>
+      <span data-operation>×</span>
+      <span data-all-clear>RESET</span>
+      <span data-equals>=</span>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Abdullah Alnoime</a>.
+    </div>
+  </div>
+  <script src="./script/main.js"></script>
+  <script src="./script/theme.js"></script>
+</body>
+
+</html>
